@@ -8,7 +8,8 @@ pipeline {
     // This assumes 'mavenV3' is configured in Jenkins Global Tool Configuration.
     tools {
         maven 'mavenV3'
-    
+    }
+
     // Define the stages of the pipeline.
     stages {
         // Checkout stage: Gets the source code.
