@@ -1,13 +1,14 @@
 pipeline {
     // Define the agent where the pipeline will run. 'any' means it can run on any available agent.
     agent any
-
+    environment {
+        APP_PORT = 8090
+    }
     // Define the tools section to specify Maven version.
     // This assumes 'mavenV3' is configured in Jenkins Global Tool Configuration.
     tools {
         maven 'mavenV3'
-    }
-
+    
     // Define the stages of the pipeline.
     stages {
         // Checkout stage: Gets the source code.
